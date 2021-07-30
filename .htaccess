@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteRule ^trang-chu$ index.php
+RewriteRule ^tin-tuc$ index.php?controller=news
+RewriteRule ^gio-hang$ index.php?controller=cart
+RewriteRule ^lien-he$ index.php?controller=contact
+RewriteRule ^san-pham/danh-muc/(.*)/(.*).html$ index.php?controller=products&action=category&id=$2
+RewriteRule ^san-pham$ index.php?controller=products&action=allcategory
+RewriteRule ^dang-nhap$ index.php?controller=account&action=login
+RewriteRule ^dang-ky$ index.php?controller=account&action=register
+RewriteRule ^dang-nhap-unsuccessful$ index.php?controller=account&action=login&notify=error
+RewriteRule ^dang-ky-unsuccessful$ index.php?controller=account&action=register&notify=error
+RewriteRule ^chi-tiet-don-hang$ index.php?controller=account&action=orders
+RewriteRule ^dang-xuat$ index.php?controller=account&action=logout
+RewriteRule ^san-pham/chi-tiet/(.*).html$ index.php?controller=products&action=detail&id=$1
+RewriteRule ^san-pham/sap-xep/(.*)/(.*).html$ index.php?controller=products&action=category&id=$1&order=$2
+RewriteRule ^xac-nhan-tai-khoan$ index.php?controller=account&action=register&notify=confirm
+RewriteRule ^tai-khoan-chua-kich-hoat$ index.php?controller=account&action=login&notify=non-active
